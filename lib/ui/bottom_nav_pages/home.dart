@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, avoid_print, avoid_unnecessary_containers, use_key_in_widget_constructors, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, avoid_print, avoid_unnecessary_containers, use_key_in_widget_constructors, non_constant_identifier_names, prefer_is_empty, unnecessary_string_interpolations
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_commerce_app/const/AppColors.dart';
@@ -40,9 +40,9 @@ class _HomeState extends State<Home> {
     setState(() {
       for (int i = 0; i < qn.docs.length; i++) {
         _products.add({
-          "product-name": qn.docs[i]["product-name"],
           "product-description": qn.docs[i]["product-description"],
           "product-price": qn.docs[i]["product-price"],
+          "product-name": qn.docs[i]["product-name"],
           "product-img": qn.docs[i]["product-img"],
         });
       }
@@ -71,7 +71,9 @@ class _HomeState extends State<Home> {
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(0)),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(0),
+                      ),
                       borderSide: BorderSide(color: Colors.blue),
                     ),
                     enabledBorder: OutlineInputBorder(
@@ -81,7 +83,7 @@ class _HomeState extends State<Home> {
                       borderSide: BorderSide(color: Colors.grey),
                     ),
                     hintText: "Search products here",
-                    hintStyle: TextStyle(fontSize: 15.sp),
+                    hintStyle: TextStyle(fontSize: 14.sp),
                   ),
                   onTap: () => Navigator.push(
                     context,
@@ -148,7 +150,7 @@ class _HomeState extends State<Home> {
                 child: GridView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: _products.length,
-                  gridDelegate: SilverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2, childAspectRatio: 1),
                   itemBuilder: (_, index) {
                     return GestureDetector(
@@ -189,5 +191,5 @@ class _HomeState extends State<Home> {
   }
 }
 
-SilverGridDelegateWithFixedCrossAxisCount(
-    {required int crossAxisCount, required int childAspectRatio}) {}
+// SilverGridDelegateWithFixedCrossAxisCount(
+//     {required int crossAxisCount, required int childAspectRatio}) {}

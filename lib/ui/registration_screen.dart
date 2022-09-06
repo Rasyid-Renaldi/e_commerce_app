@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, library_private_types_in_public_api, unused_field, avoid_print, use_build_context_synchronously
 
 import 'package:e_commerce_app/const/AppColors.dart';
+import 'package:e_commerce_app/ui/login_screen.dart';
 import 'package:e_commerce_app/ui/user_form.dart';
 import 'package:e_commerce_app/widgets/customButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -135,7 +136,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               child: TextField(
                                 controller: _emailController,
                                 decoration: InputDecoration(
-                                  hintText: "rasyed1127@gmail.com",
+                                  hintText: "fill in your email",
                                   hintStyle: TextStyle(
                                     fontSize: 14.sp,
                                     color: Color(0xFF414041),
@@ -220,11 +221,44 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           height: 50.h,
                         ),
                         customButton(
-                          "Sign Up",
+                          "Continue",
                           () {
                             signUp();
                           },
                         ),
+                        SizedBox(
+                          height: 20.h,
+                        ),
+                        Wrap(
+                          children: [
+                            Text(
+                              "Do you have an account ?",
+                              style: TextStyle(
+                                fontSize: 13.sp,
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xFFBBBBBB),
+                              ),
+                            ),
+                            GestureDetector(
+                              child: Text(
+                                "Sign In",
+                                style: TextStyle(
+                                  fontSize: 13.sp,
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColors.deep_orange,
+                                ),
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                    builder: (context) => LoginScreen(),
+                                  ),
+                                );
+                              },
+                            ),
+                          ],
+                        )
                       ],
                     ),
                   ),
