@@ -99,12 +99,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 20.h,
                         ),
                         Text(
-                          "Welcome Back",
+                          "Selamat Datang Lads!",
                           style: TextStyle(
                               fontSize: 22.sp, color: AppColors.deep_orange),
                         ),
                         Text(
-                          "Glad to see you back my buddy.",
+                          "Senang bisa bertemu dengan Anda 😁",
                           style: TextStyle(
                             fontSize: 14.sp,
                             color: Color(0xFFBBBBBB),
@@ -137,10 +137,10 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: TextField(
                                 controller: _emailController,
                                 decoration: InputDecoration(
-                                  hintText: "fill in your email",
+                                  hintText: "Masukkan email Anda",
                                   hintStyle: TextStyle(
                                     fontSize: 14.sp,
-                                    color: Color(0xFF414041),
+                                    color: Color.fromARGB(255, 165, 165, 165),
                                   ),
                                   labelText: 'EMAIL',
                                   labelStyle: TextStyle(
@@ -180,10 +180,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                 controller: _passwordController,
                                 obscureText: _obscureText,
                                 decoration: InputDecoration(
-                                  hintText: "password must be 6 character",
+                                  hintText: "password harus 6 karakter",
                                   hintStyle: TextStyle(
                                     fontSize: 14.sp,
-                                    color: Color(0xFF414041),
+                                    color: Color.fromARGB(255, 165, 165, 165),
                                   ),
                                   labelText: 'PASSWORD',
                                   labelStyle: TextStyle(
@@ -233,7 +233,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Wrap(
                           children: [
                             Text(
-                              "Don't have an account ?",
+                              "Tidak punya akun?",
                               style: TextStyle(
                                 fontSize: 13.sp,
                                 fontWeight: FontWeight.w600,
@@ -242,7 +242,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             GestureDetector(
                               child: Text(
-                                "Sign Up",
+                                " Sign Up",
                                 style: TextStyle(
                                   fontSize: 13.sp,
                                   fontWeight: FontWeight.w600,

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, unused_import, must_be_immutable
 
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -10,7 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductDetails extends StatefulWidget {
   var _product;
-  ProductDetails(this._product);
+  ProductDetails(this._product, {super.key});
   // const ProductDetails({super.key});
 
   @override
@@ -47,7 +47,9 @@ class _ProductDetailsState extends State<ProductDetails> {
       "name": widget._product["product-name"],
       "price": widget._product["product-price"],
       "name": widget._product["product-img"],
-    }).then((value) => print("Added to favourite"));
+    }).then(
+      (value) => print("Added to favourite"),
+    );
   }
 
   @override

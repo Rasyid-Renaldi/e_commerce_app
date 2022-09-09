@@ -173,7 +173,7 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                             ),
-                            Text("${_products[index]["product-img"]}"),
+                            Text("${_products[index]["product-name"]}"),
                             Text(
                                 "${_products[index]["product-price"].toString()}"),
                           ],
@@ -190,6 +190,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-// SilverGridDelegateWithFixedCrossAxisCount(
-//     {required int crossAxisCount, required int childAspectRatio}) {}

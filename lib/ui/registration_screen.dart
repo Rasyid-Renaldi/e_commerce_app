@@ -98,12 +98,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           height: 20.h,
                         ),
                         Text(
-                          "Welcome Buddy!",
+                          "Selamat Datang Lads!",
                           style: TextStyle(
                               fontSize: 22.sp, color: AppColors.deep_orange),
                         ),
                         Text(
-                          "Glad to see you back my buddy.",
+                          "Senang bisa bertemu dengan Anda 😁",
                           style: TextStyle(
                             fontSize: 14.sp,
                             color: Color(0xFFBBBBBB),
@@ -136,10 +136,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               child: TextField(
                                 controller: _emailController,
                                 decoration: InputDecoration(
-                                  hintText: "fill in your email",
+                                  hintText: "Masukkan email Anda",
                                   hintStyle: TextStyle(
                                     fontSize: 14.sp,
-                                    color: Color(0xFF414041),
+                                    color: Color.fromARGB(255, 165, 165, 165),
                                   ),
                                   labelText: 'EMAIL',
                                   labelStyle: TextStyle(
@@ -179,10 +179,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 controller: _passwordController,
                                 obscureText: _obscureText,
                                 decoration: InputDecoration(
-                                  hintText: "password must be 6 character",
+                                  hintText: "password harus 6 karakter",
                                   hintStyle: TextStyle(
                                     fontSize: 14.sp,
-                                    color: Color(0xFF414041),
+                                    color: Color.fromARGB(255, 165, 165, 165),
                                   ),
                                   labelText: 'PASSWORD',
                                   labelStyle: TextStyle(
@@ -232,7 +232,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         Wrap(
                           children: [
                             Text(
-                              "Do you have an account ?",
+                              "Sudah punya akun?",
                               style: TextStyle(
                                 fontSize: 13.sp,
                                 fontWeight: FontWeight.w600,
@@ -241,7 +241,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             ),
                             GestureDetector(
                               child: Text(
-                                "Sign In",
+                                " Sign In",
                                 style: TextStyle(
                                   fontSize: 13.sp,
                                   fontWeight: FontWeight.w600,
