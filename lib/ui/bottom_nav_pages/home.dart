@@ -97,12 +97,12 @@ class _HomeState extends State<Home> {
                 height: 10.h,
               ),
               AspectRatio(
-                aspectRatio: 3.5,
+                aspectRatio: 2.5,
                 child: CarouselSlider(
                   items: _carouselImages
                       .map(
                         (item) => Padding(
-                          padding: const EdgeInsets.only(left: 3, right: 3),
+                          padding: const EdgeInsets.only(left: 10, right: 10),
                           child: Container(
                             decoration: BoxDecoration(
                               image: DecorationImage(
@@ -136,8 +136,8 @@ class _HomeState extends State<Home> {
                     _carouselImages.length == 0 ? 1 : _carouselImages.length,
                 position: _dotPosition.toDouble(),
                 decorator: DotsDecorator(
-                  activeColor: AppColors.deep_orange,
-                  color: AppColors.deep_orange.withOpacity(0.5),
+                  activeColor: AppColors.deep_green,
+                  color: AppColors.deep_green.withOpacity(0.5),
                   spacing: EdgeInsets.all(2),
                   activeSize: Size(8, 8),
                   size: Size(6, 6),
@@ -167,7 +167,7 @@ class _HomeState extends State<Home> {
                             AspectRatio(
                               aspectRatio: 2,
                               child: Container(
-                                color: Colors.yellow,
+                                color: Colors.white,
                                 child: Image.network(
                                   _products[index]["product-img"][0],
                                 ),

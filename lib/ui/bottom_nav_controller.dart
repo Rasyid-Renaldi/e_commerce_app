@@ -38,7 +38,7 @@ class _BottomNavControllerState extends State<BottomNavController> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 5,
-        selectedItemColor: AppColors.deep_orange,
+        selectedItemColor: AppColors.deep_green,
         backgroundColor: Colors.white,
         unselectedItemColor: Colors.grey,
         currentIndex: _currentIndex,

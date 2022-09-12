@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(
-      Duration(seconds: 10),
+      Duration(seconds: 4),
       () => Navigator.push(
         context,
         CupertinoPageRoute(
@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.deep_orange,
+      backgroundColor: AppColors.deep_green,
       body: SafeArea(
         child: Center(
           child: Column(

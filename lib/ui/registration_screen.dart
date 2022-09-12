@@ -49,7 +49,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.deep_orange,
+      backgroundColor: AppColors.deep_green,
       body: SafeArea(
         child: Column(
           children: [
@@ -99,8 +99,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         ),
                         Text(
                           "Selamat Datang Lads!",
-                          style: TextStyle(
-                              fontSize: 22.sp, color: AppColors.deep_orange),
+                          style:
+                              TextStyle(fontSize: 22.sp, color: Colors.black),
                         ),
                         Text(
                           "Senang bisa bertemu dengan Anda 😁",
@@ -118,7 +118,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               height: 48.h,
                               width: 41.w,
                               decoration: BoxDecoration(
-                                color: AppColors.deep_orange,
+                                color: AppColors.deep_green,
                                 borderRadius: BorderRadius.circular(12.r),
                               ),
                               child: Center(
@@ -144,7 +144,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                   labelText: 'EMAIL',
                                   labelStyle: TextStyle(
                                     fontSize: 15.sp,
-                                    color: AppColors.deep_orange,
+                                    color: Colors.black,
                                   ),
                                 ),
                               ),
@@ -160,7 +160,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               height: 48.h,
                               width: 41.w,
                               decoration: BoxDecoration(
-                                color: AppColors.deep_orange,
+                                color: AppColors.deep_green,
                                 borderRadius: BorderRadius.circular(12.r),
                               ),
                               child: Center(
@@ -187,7 +187,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                   labelText: 'PASSWORD',
                                   labelStyle: TextStyle(
                                     fontSize: 15.sp,
-                                    color: AppColors.deep_orange,
+                                    color: Colors.black,
                                   ),
                                   suffixIcon: _obscureText == true
                                       ? IconButton(
@@ -245,7 +245,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 style: TextStyle(
                                   fontSize: 13.sp,
                                   fontWeight: FontWeight.w600,
-                                  color: AppColors.deep_orange,
+                                  color: AppColors.deep_green,
                                 ),
                               ),
                               onTap: () {

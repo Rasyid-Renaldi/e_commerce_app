@@ -75,7 +75,7 @@ class _UserFormState extends State<UserForm> {
                 Text(
                   "Sumbit the form to continue.",
                   style:
-                      TextStyle(fontSize: 22.sp, color: AppColors.deep_orange),
+                      TextStyle(fontSize: 22.sp, color: AppColors.deep_green),
                 ),
                 Text(
                   "We will not share you information with anyone.",

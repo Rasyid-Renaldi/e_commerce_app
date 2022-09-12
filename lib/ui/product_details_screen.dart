@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last, unused_import, must_be_immutable
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, unused_import, must_be_immutable, equal_keys_in_map, avoid_print, no_leading_underscores_for_local_identifiers, prefer_typing_uninitialized_variables, library_private_types_in_public_api
 
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductDetails extends StatefulWidget {
-  var _product;
-  ProductDetails(this._product, {super.key});
+  final _product;
+  const ProductDetails(this._product, {super.key});
   // const ProductDetails({super.key});
 
   @override
@@ -61,7 +61,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: CircleAvatar(
-            backgroundColor: AppColors.deep_orange,
+            backgroundColor: AppColors.deep_green,
             child: IconButton(
               onPressed: () => Navigator.pop(context),
               icon: Icon(
@@ -114,12 +114,12 @@ class _ProductDetailsState extends State<ProductDetails> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               AspectRatio(
-                aspectRatio: 3.5,
+                aspectRatio: 1.5,
                 child: CarouselSlider(
                   items: widget._product['product-img']
                       .map<Widget>(
                         (item) => Padding(
-                          padding: const EdgeInsets.only(left: 3, right: 3),
+                          padding: const EdgeInsets.only(left: 10, right: 10),
                           child: Container(
                             decoration: BoxDecoration(
                               image: DecorationImage(
@@ -167,7 +167,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     style: TextStyle(color: Colors.white, fontSize: 18.sp),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.deep_orange,
+                    backgroundColor: AppColors.deep_green,
                     elevation: 3,
                   ),
                 ),
