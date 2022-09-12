@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:e_commerce_app/const/AppColors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -24,14 +25,19 @@ class _ProfileState extends State<Profile> {
               TextEditingController(text: data['name']),
         ),
         TextFormField(
-          controller: _nameController =
+          controller: _phoneController =
               TextEditingController(text: data['phone']),
         ),
         TextFormField(
-          controller: _nameController =
-              TextEditingController(text: data['age']),
+          controller: _ageController = TextEditingController(text: data['age']),
         ),
-        ElevatedButton(onPressed: () => updateData(), child: Text("Upgrade"))
+        ElevatedButton(
+          onPressed: () => updateData(),
+          child: Text(
+            "Update",
+            selectionColor: AppColors.deep_green,
+          ),
+        ),
       ],
     );
   }
@@ -43,7 +49,9 @@ class _ProfileState extends State<Profile> {
       "name": _nameController!.text,
       "phone": _phoneController!.text,
       "age": _ageController!.text,
-    }).then((value) => print("Updated Successsfully"));
+    }).then(
+      (value) => print("Updated Successsfully"),
+    );
   }
 
   @override

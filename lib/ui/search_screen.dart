@@ -33,37 +33,32 @@ class _SearchScreenState extends State<SearchScreen> {
                   child: StreamBuilder(
                     stream: FirebaseFirestore.instance
                         .collection("products")
-                        .where("product-name",
-                            isGreaterThanOrEqualTo: inputText)
+                        .where("product-name", isEqualTo: inputText)
                         .snapshots(),
                     builder: (BuildContext context,
-                        AsyncSnapshot<QuerySnapshot> snapshot) {
-                      if (snapshot.hasError) {
-                        return Center(
-                          child: Text("Something went wrong"),
-                        );
-                      }
 
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return Center(
-                          child: Text("Loading"),
-                        );
-                      }
+                            // * Bagaimana caranya membuat ketika mengetikkan text yang tidak ada di data list maka
+                            // * pesan "Not Found" ditampilkan jika tersedia di data list maka menampilkan list yang dicari
 
-                      return ListView(
-                          children: snapshot.data!.docs
-                              .map((DocumentSnapshot document) {
-                        Map<String, dynamic> data =
-                            document.data() as Map<String, dynamic>;
-                        return Card(
-                          elevation: 5,
-                          child: ListTile(
-                            title: Text(data['product-name']),
-                            leading: Image.network(data['product-img']),
-                          ),
-                        );
-                      }).toList());
-                    },
+                            AsyncSnapshot<QuerySnapshot> snapshot) =>
+                        inputText.isEmpty == inputText.isNotEmpty
+                            ? Center(
+                                child: Text('Not found'),
+                              )
+                            : ListView(
+                                children: snapshot.data!.docs
+                                    .map((DocumentSnapshot document) {
+                                Map<String, dynamic> data =
+                                    document.data() as Map<String, dynamic>;
+                                return Card(
+                                  elevation: 5,
+                                  child: ListTile(
+                                    title: Text(data['product-name']),
+                                    leading:
+                                        Image.network(data['product-img'][0]),
+                                  ),
+                                );
+                              }).toList()),
                   ),
                 ),
               )
@@ -74,3 +69,9 @@ class _SearchScreenState extends State<SearchScreen> {
     );
   }
 }
+
+// if (snapshot.connectionState == ConnectionState.waiting) {
+//   return Center(
+//     child: Text("Loading"),
+//   );
+// }

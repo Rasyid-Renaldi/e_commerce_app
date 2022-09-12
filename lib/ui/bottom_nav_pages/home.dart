@@ -136,8 +136,8 @@ class _HomeState extends State<Home> {
                     _carouselImages.length == 0 ? 1 : _carouselImages.length,
                 position: _dotPosition.toDouble(),
                 decorator: DotsDecorator(
-                  activeColor: AppColors.deep_green,
-                  color: AppColors.deep_green.withOpacity(0.5),
+                  activeColor: Colors.black,
+                  color: Colors.black.withOpacity(0.5),
                   spacing: EdgeInsets.all(2),
                   activeSize: Size(8, 8),
                   size: Size(6, 6),

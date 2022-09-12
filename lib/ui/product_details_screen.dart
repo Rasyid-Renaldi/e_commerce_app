@@ -46,7 +46,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         .set({
       "name": widget._product["product-name"],
       "price": widget._product["product-price"],
-      "name": widget._product["product-img"],
+      "images": widget._product["product-img"],
     }).then(
       (value) => print("Added to favourite"),
     );
