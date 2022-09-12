@@ -37,8 +37,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         .snapshots(),
                     builder: (BuildContext context,
 
-                            // * Bagaimana caranya membuat ketika mengetikkan text yang tidak ada di data list maka
-                            // * pesan "Not Found" ditampilkan jika tersedia di data list maka menampilkan list yang dicari
+                            // * Bagaimana caranya membuat ketika mengetikkan text yang tidak ada di search list maka
+                            // * pesan "Not Found" ditampilkan jika tersedia di search list maka menampilkan list yang dicari
 
                             AsyncSnapshot<QuerySnapshot> snapshot) =>
                         inputText.isEmpty == inputText.isNotEmpty
